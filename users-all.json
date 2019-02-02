@@ -1,0 +1,186 @@
+{
+    "items": [
+      {
+        "configurationId": {
+          "id": "bmillan",
+          "displayName": "Bill Millan",
+          "uri": "/configuration/users/bmillan"
+        },
+        "extension": "2323",
+        "workgroups": [
+          {
+            "id": "AVP Support",
+            "displayName": "AVP Support",
+            "uri": "/configuration/workgroups/AVP%20Support"
+          },
+          {
+            "id": "CompanyOperator",
+            "displayName": "CompanyOperator",
+            "uri": "/configuration/workgroups/CompanyOperator"
+          },
+          {
+            "id": "Dialer",
+            "displayName": "Dialer",
+            "uri": "/configuration/workgroups/Dialer"
+          }
+        ]
+      },
+      {
+        "configurationId": {
+          "id": "Operator",
+          "displayName": "Company Operator",
+          "uri": "/configuration/users/Operator"
+        },
+        "extension": "0",
+        "workgroups": [
+          {
+            "id": "CompanyOperator",
+            "displayName": "CompanyOperator",
+            "uri": "/configuration/workgroups/CompanyOperator"
+          }
+        ]
+      },
+      {
+        "configurationId": {
+          "id": "demo_allstream",
+          "displayName": "Demo_Allstream",
+          "uri": "/configuration/users/demo_allstream"
+        },
+        "extension": "1",
+        "workgroups": [
+          {
+            "id": "CompanyOperator",
+            "displayName": "CompanyOperator",
+            "uri": "/configuration/workgroups/CompanyOperator"
+          }
+        ]
+      },
+      {
+        "configurationId": {
+          "id": "hphan",
+          "displayName": "Huy Phan",
+          "uri": "/configuration/users/hphan"
+        },
+        "extension": "2222",
+        "workgroups": [
+          {
+            "id": "AVP Sales",
+            "displayName": "AVP Sales",
+            "uri": "/configuration/workgroups/AVP%20Sales"
+          },
+          {
+            "id": "AVP Support",
+            "displayName": "AVP Support",
+            "uri": "/configuration/workgroups/AVP%20Support"
+          },
+          {
+            "id": "CompanyOperator",
+            "displayName": "CompanyOperator",
+            "uri": "/configuration/workgroups/CompanyOperator"
+          },
+          {
+            "id": "Dialer",
+            "displayName": "Dialer",
+            "uri": "/configuration/workgroups/Dialer"
+          }
+        ],
+        "skills": {
+          "effectiveValue": [
+            {
+              "id": {
+                "id": "English",
+                "displayName": "English",
+                "uri": "/configuration/skills/English"
+              },
+              "proficiency": 5,
+              "desireToUse": 3
+            },
+            {
+              "id": {
+                "id": "Spanish",
+                "displayName": "Spanish",
+                "uri": "/configuration/skills/Spanish"
+              },
+              "proficiency": 1,
+              "desireToUse": 1
+            },
+            {
+              "id": {
+                "id": "French",
+                "displayName": "French",
+                "uri": "/configuration/skills/French"
+              },
+              "proficiency": 1,
+              "desireToUse": 1
+            }
+          ]
+        }
+      },
+      {
+        "configurationId": {
+          "id": "icadmin",
+          "displayName": "icadmin",
+          "uri": "/configuration/users/icadmin"
+        },
+        "extension": "2000",
+        "workgroups": [
+          {
+            "id": "CompanyOperator",
+            "displayName": "CompanyOperator",
+            "uri": "/configuration/workgroups/CompanyOperator"
+          }
+        ]
+      },
+      {
+        "configurationId": {
+          "id": "jmendez",
+          "displayName": "Jared Mendez",
+          "uri": "/configuration/users/jmendez"
+        },
+        "extension": "2550",
+        "skills": {
+          "effectiveValue": [
+            {
+              "id": {
+                "id": "French",
+                "displayName": "French",
+                "uri": "/configuration/skills/French"
+              },
+              "proficiency": 1,
+              "desireToUse": 1
+            }
+          ]
+        }
+      },
+      {
+        "configurationId": {
+          "id": "srobinson",
+          "displayName": "Steve Robinson",
+          "uri": "/configuration/users/srobinson"
+        },
+        "extension": "2100",
+        "workgroups": [
+          {
+            "id": "AVP Sales",
+            "displayName": "AVP Sales",
+            "uri": "/configuration/workgroups/AVP%20Sales"
+          },
+          {
+            "id": "AVP Support",
+            "displayName": "AVP Support",
+            "uri": "/configuration/workgroups/AVP%20Support"
+          },
+          {
+            "id": "CompanyOperator",
+            "displayName": "CompanyOperator",
+            "uri": "/configuration/workgroups/CompanyOperator"
+          },
+          {
+            "id": "Dialer",
+            "displayName": "Dialer",
+            "uri": "/configuration/workgroups/Dialer"
+          }
+        ]
+      }
+    ]
+  }

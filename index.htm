@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>ICWS JavaScript Direct Usage Example</title>
+    
+    <link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+
+<body>
+
+    <!-- Control: Application Toolbar interface -->
+    <!-- Purpose: Provides a simple application toolbar for the example, with support for example page selection and 
+                  logging out of an active ICWS session. -->
+    <!-- Implementation: toolbarcontrol.js -->
+    <div class="application-toolbar">
+        <span class="application-toolbar-title">ICWS JavaScript Direct Usage Example</span>
+        <!-- Provides a simple example page selection control in the application toolbar header. -->
+        <span id="application-toolbar-page-selection-area" class="application-toolbar-page-selection-area hidden">
+            Example: <select id="application-toolbar-page-selection"></select>
+        </span>
+        <!-- Provides a simple ICWS session control set for the application toolbar header,
+             with logged in user information and a logout control. -->
+        <span id="application-toolbar-connect" class="application-toolbar-connect hidden">
+            <span id="toolbar-user"></span>
+            <a id="toolbar-logout" href="javascript:void(0);">log out</a>
+        </span>
+    </div>
+
+    <!-- Control: Diagnostic area -->
+    <!-- Purpose: This sidebar displays diagnostic information about what the application is doing, to help correlate
+                  user interface operations with ICWS API operations. -->
+    <!-- Implementation: diagnosticcontrol.js -->
+    <div class="application-sidebar">
+        <div class="application-sidebar-title">
+            <span>ICWS Operations</span>
+            <a class="application-sidebar-right-area" id="diagnostic-clear" href="javascript:void(0);">clear</a>
+        </div>
+        <div id="diagnostic-contents" class="application-sidebar-contents"></div>
+    </div>
+    
+    <!-- Application example pages. -->
+    <div class="application-pages">
+        <!-- Control: Introduction page -->
+        <!-- Purpose: Implements an introduction page providing overview information for the application. -->
+        <!-- Implementation: intropage.js -->
+        <div id="intro-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example application demonstrates using the ICWS API directly, using only HTML and JavaScript.  No wrapper classes are used for requests/responses/messages and no 3rd party framework is used (e.g. jQuery or an application level framework).</p>
+                <p>The application sidebar displays diagnostic information about what the application is doing, to help correlate user interface operations with ICWS API operations.  Once an ICWS connection is established, the application header will include an example page selection control and simple ICWS session controls (i.e. the logged in IC user and a logout option).</p>
+                <p>Once the user continues on to the application, a connection form will be displayed to allow the user to connect to an ICWS server.  Additional example pages are available once an ICWS connection is established.</p>
+                
+                <!-- Option to continue on to the rest of the application, for browsers that support it. -->
+                <p><a id="intro-continue" class="hidden" href="javascript:void(0);">Continue to the application</a></p>
+                
+                <!-- Provide a notification for browsers that this example application does not support by default. -->
+                <div id="intro-unsupported-browser" class="hidden">
+                    <p>NOTE: This example application is not supported for this browser. Due to limitations with CORS support, some browsers do not support this example application unless a web proxy is utilized.  To support 'out of the box' usage of the example application, without the need for a web proxy, the application functionality is limited for those browsers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control: Connect example page -->
+        <!-- Purpose: Provides a basic ICWS login dialog. -->
+        <!-- Implementation: connectpage.js -->
+        <div id="connect-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example page demonstrates connecting to ICWS and logging an IC user in to the server.  This is required for nearly all ICWS operations and provides context for those operations to be performed relative to the logged in IC user's rights.</p>
+                <p>The example also monitors for messages coming from the ICWS server.  Messages are sent based on the active ICWS subscriptions that the application creates.</p>
+            </div>
+            <div class="connection-centered">
+                <!-- A basic login dialog. -->
+                <form id="connection-form" class="dialog">
+                    <fieldset>
+                        <legend>Connection</legend>
+                        <div class="dialog-row"><div class="dialog-label">Server</div><div class="dialog-field"><input type="text" name="server" value="" required autofocus /></div></div>
+                        <div class="dialog-row"><div class="dialog-label">User ID</div><div class="dialog-field"><input type="text" name="userId" value="" required /></div></div>
+                        <div class="dialog-row"><div class="dialog-label">Password</div><div class="dialog-field"><input type="password" name="password" value="" required /></div></div>
+                        <!-- Provide support to persist the ICWS server and user to browser storage. -->
+                        <div class="dialog-row" id="server-remember"><div class="dialog-label">&nbsp;</div><div class="dialog-field"><label><input type="checkbox" name="remember" checked="true" />Remember me</label></div></div>
+                        <div class="dialog-row"><div class="dialog-label">&nbsp;</div><div class="dialog-field"><input type="submit" name="button" value="Connect" /></div></div>
+                    </fieldset>
+                </form>
+                
+                <!-- Provides a little feedback to the user that a connection is in progress, or that there was an error with a connection attempt. -->
+                <div class="centered">
+                    <img src="working.gif" id="connect-working" class="hidden" /> <span id="connect-message" class="hidden"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Control: Version example page -->
+        <!-- Purpose: Provides examples of retrieving ICWS server version and feature information. -->
+        <!-- Implementation: versionpage.js -->
+        <div id="version-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example page retrieves and caches ICWS server version information, based on the "Server" field value.  Applications can use ICWS version information to determine broadly if the application's needs are supported by a given ICWS server.  This operation does not require an ICWS login.</p>
+                <p>Additionally, it retrieves and caches ICWS server features/versions, based on the "Server" field value.  Applications can use ICWS feature versions to determine if an ICWS feature that the application needs is supported by a given ICWS server that the application is connected to.  Each ICWS request's documentation describes the feature and version required for that request or property.  This operation does not require an ICWS login.</p>
+            </div>
+            <div class="connection-centered">
+                <p>ICWS server version: <span id="server-version" class="connection-form-server-version"></span></p>
+                
+                <!-- Demonstrates display of the ICWS server features and their versions.
+                     These feature versions can be used to determine compatibility of a client application with an ICWS server. -->
+                <table id="server-features-area" class="server-features-area basic-table hidden">
+                    <caption>Server Features</caption>
+                    <thead><tr><th>Feature</th><th>Version</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Control: Status example page -->
+        <!-- Purpose: Demonstrates IC user status subscription and modification. -->
+        <!-- Implementation: statuspage.js -->
+        <div id="status-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example displays the logged in user's Interaction Center status.  The collection of IC status messages is retrieved, along with information about which ones the user is allowed to set their status to.  A subscription is started to receive updates for the logged in user's IC status.  Optionally, the example will change the user to a random IC status every few seconds.</p>
+            </div>
+            <p>Logged in user's current status: <span id="user-current-status"></span></p>
+            <p><label><input id="user-change-status" type="checkbox"> Check this to automatically change the logged in user's IC status every few seconds.</label></p>
+        </div>
+        
+        <!-- Control: User configuration example page -->
+        <!-- Purpose: Demonstrates retrieval of the logged in IC user's configuration settings. -->
+        <!-- Implementation: userconfigpage.js -->
+        <div id="user-config-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example displays all of the configuration settings for the logged in user.  Note that this example retrieves all properties as a simple example; however, it is inefficient since it requests all properties on the user--in general, the specific properties that are needed by an application should be specified.  This information is requested once the application is connected and the page is shown.  No subscription is started to receive updates.</p>
+            </div>
+            <span id="user-config-display" class="user-config-display"></span>
+        </div>
+        
+        <!-- Control: Workgroup configuration example page -->
+        <!-- Purpose: Demonstrates subscription to a set of configuration settings for IC workgroups. -->
+        <!-- Implementation: workgroupconfigpage.js -->
+        <div id="workgroup-config-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example displays workgroup configuration information.  A subscription is started to receive updates (once the application is connected and the page is shown).</p>
+                <p>If an IC administrative application is used to modify these workgroup's below-displayed properties, the display will be updated in response to the subscription updates.</p>
+            </div>
+            <table id="workgroup-config-table" class="workgroup-config-table basic-table">
+                <caption>Monitored Workgroups</caption>
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Control: Recordings example page -->
+        <!-- Purpose: Demonstrates the usage of public Recordings APIs. -->
+        <!-- Implementation: recordings.js -->
+        <div id="recordings-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example demonstrates the usage of public Recordings APIs. An existing recording ID must be specified in the text box below for most APIs. This is a 36 character GUID including dashes - e.g., "fa56a114-77b1-d085-87c7-7cb1ed460001".</p>
+                <p>The user may choose to export the recording, view the recording's tags and attributes, start/stop station audio playback, or send recordings as an email. Station audio playback requires the user to first log into a station.</p>
+            </div>
+            <div class="recording-operations">
+                <span id="api-selection-area" class="api-selection-area">
+                    Select an API: <select id="recording-api-selection"></select>
+                </span>
+                <div class="recording-id-field">Recording ID:<input class="recording-id-input" type="text" id="recording-id" value=""/></div>
+
+                <!--Export recording-->
+                <div class="recording-api hidden" id="recording-export-api">
+                    <a id="recording-export" href="javascript:void(0);">Export File</a>
+                </div>
+
+                <!--Load attributes-->
+                <div class="recording-api hidden" id="recording-attributes-api">
+                    <a id="recording-get-attributes" href="javascript:void(0);">Load Attributes</a>
+                    <div id="recording-attrs" class="hidden">
+                        <table id="recording-attrs-table" class="recording-table basic-table">
+                            <caption>Attributes</caption>
+                            <thead></thead>
+                            <tbody></tbody>
+                            <tbody>
+                                <tr>
+                                    <td><input class="recording-attr-input" type="text" id="new-attr-name" value=""/></td>
+                                    <td><input class="recording-attr-input" type="text" id="new-attr-value" value=""/></td>
+                                    <td><a id="recording-attr-add" href="javascript:void(0);">Add/Update</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Load tags-->
+                <div class="recording-api hidden" id="recording-tags-api">
+                    <a id="recording-get-tags" href="javascript:void(0);">Load Tags</a>
+                    <div id="recording-tags" class="hidden">
+                        <table id="recording-tags-table" class="recording-table basic-table">
+                            <caption>Tags</caption>
+                            <thead></thead>
+                            <tbody></tbody>
+                            <tbody>
+                                <tr>
+                                    <td><input class="recording-attr-input" type="text" id="new-tag" value=""/></td>
+                                    <td><a id="recording-tag-add" href="javascript:void(0);">Add</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Start/Stop Station Audio Playback-->
+                <div class="recording-api hidden" id="recording-station-playback-api">
+                    <div class="connection-centered">
+                        <form id="station-form" class="dialog hidden">
+                            <p>A station login is required when the logged in user does not have an effective station.</p>
+                            <fieldset>
+                                <legend>Station Login</legend>
+                                <div class="dialog-row"><div class="dialog-label">Station ID:</div><div class="dialog-field"><input type="text" name="stationId" value="" required/></div></div>
+                                <div class="dialog-row"><div class="dialog-field"><input type="submit" name="login-station" value="Login" /></div></div>
+                            </fieldset>
+                        </form>
+                        <div id="station-status" class="hidden status"></div>
+                    </div>
+                    <a id="recording-play-station" href="javascript:void(0);">Play Station Audio</a>
+                    <a id="recording-stop-station" href="javascript:void(0);" class="hidden">Stop Station Audio</a>
+                </div>
+                
+                <!--Send Recording as Email-->
+                <div class="recording-api hidden" id="recording-send-as-email">
+                    <p>
+                    Multiple recordings can be specified in the Recording ID field as a comma-separated list.
+                    The recordings will be attached to a default Email and sent to the recipient Email addresses specified below. 
+                    The recipients list should also be comma-separated.
+                    </p>
+                    <div>Recipients:<input class='recording-input' type="text" id="recording-email-to" value=""/></div>
+                    <a id="recording-send-email" href="javascript:void(0);">Send Email</a>
+                </div>
+
+                <div id="recording-status" class="hidden status"></div>
+            </div>
+        </div>
+
+        <!-- Control: Screen Recordings example page -->
+        <!-- Purpose: Demonstrates the usage of public Screen Recordings APIs. -->
+        <!-- Implementation: screenrecordings.js -->
+        <div id="screen-recordings-page" class="application-page hidden">
+            <div class="example-details-box">
+                <p>This example demonstrates the usage of public Screen Recordings APIs.</p>
+                <p>A comma separated list of existing recording IDs must be specified in the text box below for the stop screen recording operation. The members of this list are 36 character GUIDs including dashes - e.g., "fa56a114-77b1-d085-87c7-7cb1ed460001".</p>
+                <p>The given user to record must have the screen capture client installed and properly configured in order for the screen to be recorded. Multiple screen recordings will be made if the user is logged into multiple screen capture client instances.</p>
+            </div>
+            <div class="screen-recording-operations">
+                <span id="api-selection-area" class="api-selection-area">
+                    Select an API: <select id="screen-recording-api-selection"></select>
+                </span>
+
+                <div class="screen-recording-api hidden" id="screen-recording-record">
+                    <!--Record-->
+                    <div class="screen-recording-user-id-field">User ID:<input class="screen-recording-user-id-input" type="text" id="screen-recording-user-id" value="" /></div>
+
+                    <div class="screen-recording-recording-ids-field">Screen Recording IDs to Stop:<input class="screen-recording-recording-ids-input" type="text" id="screen-recording-recording-ids" value="" /></div>
+                    
+                    <div class="screen-recording-start-button"><input type="submit" name="screen-recording-start"  id="screen-recording-start"  value="Start" /></div>
+                    <div class="screen-recording-stop-resume-button"><input type="submit" name="screen-recording-stop"   id="screen-recording-stop"   value="Stop"  /></div>
+                    
+                    <p>Pause/Resume will affect all screen recordings for the user.</p>
+                    <div class="screen-recording-pause-button"><input type="submit" name="screen-recording-pause" id="screen-recording-pause" value="Pause" /></div>
+                    <div class="screen-recording-stop-resume-button"><input type="submit" name="screen-recording-resume" id="screen-recording-resume" value="Resume" /></div>
+
+                    <div id="screen-recording-status" class="hidden status"></div>
+                </div>   
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- In order to improve example application comprehensibility,
+         the JavaScript code is distributed across separate files. -->
+         
+    <!-- Base framework support -->
+    <script type="text/javascript" src="utilities.js"></script>
+    <script type="text/javascript" src="diagnostics.js"></script>
+    <!-- Basic ICWS usage model -->
+    <script type="text/javascript" src="session.js"></script>
+    <!-- Simple application model -->
+    <script type="text/javascript" src="applicationmodel.js"></script>
+    <!-- Application example pages -->
+    <script type="text/javascript" src="intropage.js"></script>
+    <script type="text/javascript" src="connectpage.js"></script>
+    <script type="text/javascript" src="versionpage.js"></script>
+    <script type="text/javascript" src="statuspage.js"></script>
+    <script type="text/javascript" src="userconfigpage.js"></script>
+    <script type="text/javascript" src="workgroupconfigpage.js"></script>
+    <script type="text/javascript" src="recordings.js"></script>
+    <script type="text/javascript" src="screenrecordings.js"></script>
+    <!-- Application model controls -->
+    <script type="text/javascript" src="toolbarcontrol.js"></script>
+    <script type="text/javascript" src="diagnosticcontrol.js"></script>
+    
+</body>
+</html>

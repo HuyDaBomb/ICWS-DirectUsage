@@ -1,0 +1,1737 @@
+{
+    "configurationId": {
+      "id": "hphan",
+      "displayName": "Huy Phan",
+      "uri": "/configuration/users/hphan"
+    },
+    "autoAnswerAcdInteractions": false,
+    "autoAnswerNonAcdInteractions": false,
+    "clientConfigDateLastModified": "20171126T194617Z",
+    "clientTemplate": [
+      {
+        "id": {
+          "id": "All Channel Agent",
+          "displayName": "All Channel Agent",
+          "uri": "/configuration/client-templates/All%20Channel%20Agent"
+        },
+        "applicationId": "InteractionDesktop",
+        "publishedDate": "20171128T044621Z"
+      }
+    ],
+    "cost": 0,
+    "personalInformationProperties": {
+      "country": "United States",
+      "givenName": "Huy",
+      "phoneNumberOfMobile": {
+        "dialExtensionAutomatically": false,
+        "extension": "",
+        "number": "1 (360) 281-0990"
+      },
+      "emailAddress": "hphan@avantpoint.com",
+      "surname": "Phan"
+    },
+    "createdDate": "20171118T063908Z",
+    "lastModifiedDate": "20180524T173000Z",
+    "mailboxProperties": {
+      "directoryMoniker": "ININ.Mail.ObjectMoniker:<x-inin-mail.ex.ews.directory:/d=avantpoint.com/e=hphan@avantpoint.com>",
+      "emailAddress": "hphan@avantpoint.com",
+      "mailboxMoniker": "ININ.Mail.ObjectMoniker:<x-inin-mail.ex.ews.store:/s=hphan@avantpoint.com>",
+      "displayName": "Huy Phan",
+      "type": 3
+    },
+    "excludeFromDirectory": false,
+    "extension": "2222",
+    "faxCapability": false,
+    "homeSite": 1,
+    "lyncIntegrationEnabled": false,
+    "lyncOption": [
+      4
+    ],
+    "mwiEnabled": false,
+    "mwiMode": 0,
+    "outboundAni": "3605476394",
+    "outlookIntegrationEnabled": false,
+    "pagerActive": false,
+    "passwordPolicies": {
+      "actualValue": []
+    },
+    "statisticsShiftStarts": [
+      0
+    ],
+    "umDestination": "IC Server",
+    "whisperToneLevel": -25,
+    "workgroups": [
+      {
+        "id": "AVP Sales",
+        "displayName": "AVP Sales",
+        "uri": "/configuration/workgroups/AVP%20Sales"
+      },
+      {
+        "id": "AVP Support",
+        "displayName": "AVP Support",
+        "uri": "/configuration/workgroups/AVP%20Support"
+      },
+      {
+        "id": "CompanyOperator",
+        "displayName": "CompanyOperator",
+        "uri": "/configuration/workgroups/CompanyOperator"
+      },
+      {
+        "id": "Dialer",
+        "displayName": "Dialer",
+        "uri": "/configuration/workgroups/Dialer"
+      }
+    ],
+    "statusText": "On Vacation",
+    "licenseProperties": {
+      "additionalLicenses": [
+        {
+          "id": "I3_ACCESS_DIALER_ADDON",
+          "displayName": "Interaction Dialer Add-On",
+          "uri": "/configuration/license-allocations/I3_ACCESS_DIALER_ADDON"
+        },
+        {
+          "id": "I3_ACCESS_DIALER_SUPERVISOR_PLUGIN",
+          "displayName": "Interaction Supervisor Plug-In: Interaction Dialer",
+          "uri": "/configuration/license-allocations/I3_ACCESS_DIALER_SUPERVISOR_PLUGIN"
+        },
+        {
+          "id": "I3_ACCESS_HISTORICAL_REPORT_SUPERVISOR_PLUGIN",
+          "displayName": "Interaction Supervisor Plug-In: Historical Reporting",
+          "uri": "/configuration/license-allocations/I3_ACCESS_HISTORICAL_REPORT_SUPERVISOR_PLUGIN"
+        },
+        {
+          "id": "I3_ACCESS_INTERACTION_SCRIPTER_ADDON",
+          "displayName": "Interaction Scripter",
+          "uri": "/configuration/license-allocations/I3_ACCESS_INTERACTION_SCRIPTER_ADDON"
+        },
+        {
+          "id": "I3_ACCESS_RECORDER",
+          "displayName": "Interaction Recorder Access",
+          "uri": "/configuration/license-allocations/I3_ACCESS_RECORDER"
+        },
+        {
+          "id": "I3_ACCESS_RECORDER_CLIENT",
+          "displayName": "Interaction Recorder Client Access",
+          "uri": "/configuration/license-allocations/I3_ACCESS_RECORDER_CLIENT"
+        },
+        {
+          "id": "I3_ACCESS_RECORDER_QUALITYMONITORING",
+          "displayName": "Interaction Quality Manager",
+          "uri": "/configuration/license-allocations/I3_ACCESS_RECORDER_QUALITYMONITORING"
+        },
+        {
+          "id": "I3_ACCESS_REPORT_ASSISTANT_SUPERVISOR_PLUGIN",
+          "displayName": "Interaction Supervisor Plug-In: Reporting Assistant",
+          "uri": "/configuration/license-allocations/I3_ACCESS_REPORT_ASSISTANT_SUPERVISOR_PLUGIN"
+        },
+        {
+          "id": "I3_ACCESS_SYSTEM_STATUS_SUPERVISOR_PLUGIN",
+          "displayName": "Interaction Supervisor Plug-In: System Status",
+          "uri": "/configuration/license-allocations/I3_ACCESS_SYSTEM_STATUS_SUPERVISOR_PLUGIN"
+        },
+        {
+          "id": "I3_ACCESS_WORKGROUP_SUPERVISOR_PLUGIN",
+          "displayName": "Interaction Supervisor Plug-In: Workgroup",
+          "uri": "/configuration/license-allocations/I3_ACCESS_WORKGROUP_SUPERVISOR_PLUGIN"
+        }
+      ],
+      "interactionProcessAutomationType": 0,
+      "licenseActive": true,
+      "hasClientAccess": true,
+      "mediaLevel": 1,
+      "mediaTypes": [
+        2
+      ],
+      "allocationType": 0
+    },
+    "accessControlGroupAssignment": {
+      "id": "ACG Root",
+      "displayName": "Root",
+      "uri": "/configuration/access-control-groups/ACG%20Root"
+    },
+    "securityRights": {
+      "accessAllInteractionConferences": {
+        "effectiveValue": false
+      },
+      "accessOwnedInteractionConferences": {
+        "effectiveValue": false
+      },
+      "accountCodeVerification": {
+        "effectiveValue": true
+      },
+      "agentPreferences": {
+        "effectiveValue": false
+      },
+      "allowAgentRules": {
+        "effectiveValue": true
+      },
+      "allowAccessToProblemReporter": {
+        "effectiveValue": false
+      },
+      "allowAgentSeeOwnRank": {
+        "effectiveValue": false
+      },
+      "allowAgentSeeRelativeRank": {
+        "effectiveValue": false
+      },
+      "allowAgentScheduleBidding": {
+        "effectiveValue": false
+      },
+      "allowAlertProgramming": {
+        "effectiveValue": true
+      },
+      "allowEmailAlerts": {
+        "effectiveValue": true
+      },
+      "allowEmailAccessViaTui": {
+        "effectiveValue": true
+      },
+      "allowFaxAccessViaTui": {
+        "effectiveValue": true
+      },
+      "allowHandlerAlerts": {
+        "effectiveValue": true
+      },
+      "allowMemoAlerts": {
+        "effectiveValue": true
+      },
+      "allowMiniMode": {
+        "effectiveValue": true
+      },
+      "allowMultipleCalls": {
+        "effectiveValue": true
+      },
+      "allowRelatedInteractionsPage": {
+        "effectiveValue": true
+      },
+      "allowVoiceMaiAccessViaTui": {
+        "effectiveValue": true
+      },
+      "canAccessOptimizerShiftTrading": {
+        "effectiveValue": false
+      },
+      "canCoachInteractions": {
+        "effectiveValue": true
+      },
+      "canCreateEmailAttendantProfile": {
+        "effectiveValue": true
+      },
+      "canCreateInboundAttendantProfile": {
+        "effectiveValue": true
+      },
+      "canCreateOperatorAttendantProfile": {
+        "effectiveValue": true
+      },
+      "canCreateOptimizerActivityCodes": {
+        "effectiveValue": false
+      },
+      "canCreateOptimizerDayClassifications": {
+        "effectiveValue": false
+      },
+      "canCreateOutboundAttendantProfile": {
+        "effectiveValue": true
+      },
+      "canCreateQuestionnaireDirectories": {
+        "effectiveValue": false
+      },
+      "canCreateSchedulingUnits": {
+        "effectiveValue": false
+      },
+      "canDeleteOptimizerActivityCodes": {
+        "effectiveValue": false
+      },
+      "canDeleteOptimizerDayClassifications": {
+        "effectiveValue": false
+      },
+      "canDeleteSchedulingUnits": {
+        "effectiveValue": false
+      },
+      "canDisconnectInteractions": {
+        "effectiveValue": true
+      },
+      "canInitiateRecordingSnippet": {
+        "effectiveValue": false
+      },
+      "canInitiateSecureInput": {
+        "effectiveValue": true
+      },
+      "canJoinInteractions": {
+        "effectiveValue": true
+      },
+      "canModifyOptimizerActivityCodes": {
+        "effectiveValue": false
+      },
+      "canModifyOptimizerDayClassifications": {
+        "effectiveValue": false
+      },
+      "canModifyOptimizerStatusActivityTypeMapping": {
+        "effectiveValue": false
+      },
+      "canMuteInteractions": {
+        "effectiveValue": true
+      },
+      "canOverrideFinishedScorecards": {
+        "effectiveValue": false
+      },
+      "canPauseInteractions": {
+        "effectiveValue": true
+      },
+      "canPickupInteractions": {
+        "effectiveValue": true
+      },
+      "canPublishProcess": {
+        "effectiveValue": true
+      },
+      "canPutInteractionsOnHold": {
+        "effectiveValue": true
+      },
+      "canRequestAssistanceFromSupervisor": {
+        "effectiveValue": true
+      },
+      "canSecureRecordingPauseInteractions": {
+        "effectiveValue": true
+      },
+      "canSubmitTimeOff": {
+        "effectiveValue": true
+      },
+      "canTransferInteractions": {
+        "effectiveValue": true
+      },
+      "canTransferInteractionsToVoicemail": {
+        "effectiveValue": true
+      },
+      "canViewOptimizerActivityCodes": {
+        "effectiveValue": false
+      },
+      "canViewOptimizerDayClassifications": {
+        "effectiveValue": false
+      },
+      "canViewOptimizerStatusActivityTypeMapping": {
+        "effectiveValue": false
+      },
+      "canConferenceCalls": {
+        "effectiveValue": true
+      },
+      "dataExtractorJobAdmin": {
+        "effectiveValue": false
+      },
+      "debugHandlers": {
+        "effectiveValue": true
+      },
+      "useTiffForFaxes": {
+        "effectiveValue": true
+      },
+      "havePrivateContacts": {
+        "effectiveValue": true
+      },
+      "iPPhoneProvisioningAdmin": {
+        "effectiveValue": true
+      },
+      "addIndividuals": {
+        "effectiveValue": true
+      },
+      "addOrganizations": {
+        "effectiveValue": true
+      },
+      "deleteIndividuals": {
+        "effectiveValue": true
+      },
+      "deleteOrganizations": {
+        "effectiveValue": true
+      },
+      "modifyInteractions": {
+        "effectiveValue": true
+      },
+      "modifyOrganizations": {
+        "effectiveValue": true
+      },
+      "interactionRecorderMasterKeyPasswordAdministrator": {
+        "effectiveValue": false
+      },
+      "trackerAdministrator": {
+        "effectiveValue": true
+      },
+      "viewOtherPeoplesPrivateInteractions": {
+        "effectiveValue": true
+      },
+      "canListenInOnInteractions": {
+        "effectiveValue": true
+      },
+      "lockPolicySets": {
+        "effectiveValue": false
+      },
+      "loginCampaign": {
+        "effectiveValue": false
+      },
+      "canManageClientTemplates": {
+        "effectiveValue": false
+      },
+      "manageHandlers": {
+        "effectiveValue": true
+      },
+      "mobileOfficeUser": {
+        "effectiveValue": false
+      },
+      "modifyConfigurationChangeAuditing": {
+        "effectiveValue": true
+      },
+      "modifyConfigurationGeneral": {
+        "effectiveValue": true
+      },
+      "modifyConfigurationHTTPServer": {
+        "effectiveValue": true
+      },
+      "modifyConfigurationOutboundServers": {
+        "effectiveValue": true
+      },
+      "modifyConfigurationPhoneNumberTypes": {
+        "effectiveValue": true
+      },
+      "modifyConfigurationPreviewCallBehavior": {
+        "effectiveValue": true
+      },
+      "modifyIndividuals": {
+        "effectiveValue": true
+      },
+      "canOrbitQueue": {
+        "effectiveValue": true
+      },
+      "canParkInteractions": {
+        "effectiveValue": true
+      },
+      "publishHandlers": {
+        "effectiveValue": true
+      },
+      "canUserInteractionRecorderSelector": {
+        "effectiveValue": true
+      },
+      "remoteControl": {
+        "effectiveValue": false
+      },
+      "reporterAdministrator": {
+        "effectiveValue": false
+      },
+      "requireForcedAuthorizationCode": {
+        "effectiveValue": false
+      },
+      "allowResponseManagement": {
+        "effectiveValue": true
+      },
+      "allowReceiveVoicemail": {
+        "effectiveValue": true
+      },
+      "allowIntercomChat": {
+        "effectiveValue": true
+      },
+      "allowUserDefinedTelephoneNumberOnRemoteLogin": {
+        "effectiveValue": true
+      },
+      "allowVideo": {
+        "effectiveValue": true
+      },
+      "customizeClient": {
+        "effectiveValue": true
+      },
+      "directoryAdmin": {
+        "effectiveValue": true
+      },
+      "followMe": {
+        "effectiveValue": true
+      },
+      "allowPersistentConnections": {
+        "effectiveValue": true
+      },
+      "privateCalls": {
+        "effectiveValue": true
+      },
+      "canRecordInteractions": {
+        "effectiveValue": true
+      },
+      "runContactListPredefinedActions": {
+        "effectiveValue": false
+      },
+      "showAssistanceButton": {
+        "effectiveValue": true
+      },
+      "showCoachButton": {
+        "effectiveValue": true
+      },
+      "showDisconnectButton": {
+        "effectiveValue": true
+      },
+      "showHoldButton": {
+        "effectiveValue": true
+      },
+      "showJoinButton": {
+        "effectiveValue": true
+      },
+      "showListenButton": {
+        "effectiveValue": true
+      },
+      "allowMonitorColumns": {
+        "effectiveValue": true
+      },
+      "showMuteButton": {
+        "effectiveValue": true
+      },
+      "showParkButton": {
+        "effectiveValue": true
+      },
+      "showPauseButton": {
+        "effectiveValue": true
+      },
+      "showPickupButton": {
+        "effectiveValue": true
+      },
+      "showPrivateButton": {
+        "effectiveValue": true
+      },
+      "showRecordButton": {
+        "effectiveValue": true
+      },
+      "showRecordingSnippetButton": {
+        "effectiveValue": false
+      },
+      "showSecureInputButton": {
+        "effectiveValue": true
+      },
+      "showSecureRecordingPauseButton": {
+        "effectiveValue": true
+      },
+      "showTransferButton": {
+        "effectiveValue": true
+      },
+      "showVoicemailButton": {
+        "effectiveValue": true
+      },
+      "allowWorkgroupStats": {
+        "effectiveValue": true
+      },
+      "allowSpeedDials": {
+        "effectiveValue": true
+      },
+      "allowStatusNotes": {
+        "effectiveValue": true
+      },
+      "traceConfiguration": {
+        "effectiveValue": true
+      },
+      "outlookTuiUser": {
+        "effectiveValue": false
+      },
+      "viewConfigurationChangeAuditing": {
+        "effectiveValue": true
+      },
+      "viewConfigurationGeneral": {
+        "effectiveValue": true
+      },
+      "viewConfigurationHTTPServer": {
+        "effectiveValue": true
+      },
+      "viewConfigurationOutboundServers": {
+        "effectiveValue": true
+      },
+      "viewConfigurationPhoneNumberTypes": {
+        "effectiveValue": true
+      },
+      "viewConfigurationPreviewCallBehavior": {
+        "effectiveValue": true
+      },
+      "viewInteractionDetails": {
+        "effectiveValue": true
+      },
+      "viewModifyCampaignAgentlessCallingType": {
+        "effectiveValue": false
+      },
+      "viewModifyCampaignAutomaticTimeZoneMapping": {
+        "effectiveValue": false
+      },
+      "viewModifyCampaignLineSettings": {
+        "effectiveValue": false
+      },
+      "viewModifyCampaignMaxLines": {
+        "effectiveValue": false
+      },
+      "viewModifyCampaignStatus": {
+        "effectiveValue": false
+      },
+      "viewModifyContactListDataQuery": {
+        "effectiveValue": false
+      },
+      "viewModifyCustomHandlerActions": {
+        "effectiveValue": false
+      },
+      "viewModifyDatabaseConnections": {
+        "effectiveValue": false
+      },
+      "viewModifyDncSources": {
+        "effectiveValue": false
+      },
+      "viewModifyEventLog": {
+        "effectiveValue": false
+      },
+      "viewModifyTimeZoneMapData": {
+        "effectiveValue": false
+      },
+      "showWorkgroupsProfilesTab": {
+        "effectiveValue": true
+      }
+    },
+    "accessRights": {
+      "listAccountCodes": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "activateOthers": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "activateSelf": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "canEditAccessRights": {
+        "effectiveValue": true
+      },
+      "changeUserStatus": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "phoneNumberClassifications": {
+        "effectiveValue": [
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local Operator",
+            "displayName": "Local Operator",
+            "uri": "/configuration/dial-plan-classifications/Local%20Operator"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Intercom",
+            "displayName": "Intercom",
+            "uri": "/configuration/dial-plan-classifications/Intercom"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Toll Free",
+            "displayName": "Toll Free",
+            "uri": "/configuration/dial-plan-classifications/Toll%20Free"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Long Distance",
+            "displayName": "Long Distance",
+            "uri": "/configuration/dial-plan-classifications/Long%20Distance"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "SIP",
+            "displayName": "SIP",
+            "uri": "/configuration/dial-plan-classifications/SIP"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Information",
+            "displayName": "Information",
+            "uri": "/configuration/dial-plan-classifications/Information"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "International",
+            "displayName": "International",
+            "uri": "/configuration/dial-plan-classifications/International"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Emergency",
+            "displayName": "Emergency",
+            "uri": "/configuration/dial-plan-classifications/Emergency"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local",
+            "displayName": "Local",
+            "uri": "/configuration/dial-plan-classifications/Local"
+          }
+        ]
+      },
+      "clientButtons": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "coachLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "coachStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "coachUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "coachWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "disconnectLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "disconnectStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "disconnectUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "disconnectWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "followMePhoneNumberClassifications": {
+        "effectiveValue": [
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local Operator",
+            "displayName": "Local Operator",
+            "uri": "/configuration/dial-plan-classifications/Local%20Operator"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Intercom",
+            "displayName": "Intercom",
+            "uri": "/configuration/dial-plan-classifications/Intercom"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Toll Free",
+            "displayName": "Toll Free",
+            "uri": "/configuration/dial-plan-classifications/Toll%20Free"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Long Distance",
+            "displayName": "Long Distance",
+            "uri": "/configuration/dial-plan-classifications/Long%20Distance"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "SIP",
+            "displayName": "SIP",
+            "uri": "/configuration/dial-plan-classifications/SIP"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Information",
+            "displayName": "Information",
+            "uri": "/configuration/dial-plan-classifications/Information"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "International",
+            "displayName": "International",
+            "uri": "/configuration/dial-plan-classifications/International"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Emergency",
+            "displayName": "Emergency",
+            "uri": "/configuration/dial-plan-classifications/Emergency"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local",
+            "displayName": "Local",
+            "uri": "/configuration/dial-plan-classifications/Local"
+          }
+        ]
+      },
+      "forwardPhoneNumberClassifications": {
+        "effectiveValue": [
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local Operator",
+            "displayName": "Local Operator",
+            "uri": "/configuration/dial-plan-classifications/Local%20Operator"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Intercom",
+            "displayName": "Intercom",
+            "uri": "/configuration/dial-plan-classifications/Intercom"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Toll Free",
+            "displayName": "Toll Free",
+            "uri": "/configuration/dial-plan-classifications/Toll%20Free"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Long Distance",
+            "displayName": "Long Distance",
+            "uri": "/configuration/dial-plan-classifications/Long%20Distance"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "SIP",
+            "displayName": "SIP",
+            "uri": "/configuration/dial-plan-classifications/SIP"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Information",
+            "displayName": "Information",
+            "uri": "/configuration/dial-plan-classifications/Information"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "International",
+            "displayName": "International",
+            "uri": "/configuration/dial-plan-classifications/International"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Emergency",
+            "displayName": "Emergency",
+            "uri": "/configuration/dial-plan-classifications/Emergency"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local",
+            "displayName": "Local",
+            "uri": "/configuration/dial-plan-classifications/Local"
+          }
+        ]
+      },
+      "holdStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "holdUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "joinLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "joinStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "joinUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "joinWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "launchableProcessList": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "listenLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "listenStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "listenUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "listenWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "loginStation": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "manageProcessList": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "modifyAttendantEmailProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "modifyAttendantInboundProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "modifyAttendantOperatorProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "modifyAttendantOutboundProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "modifyCampaignList": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "muteStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "muteUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "pickupLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "pickupStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "pickupUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "pickupWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "previewEmailUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "previewEmailWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "recordLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "recordStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "recordUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "recordWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "statusMessages": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "substituteQueueControlColumns": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "transferLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "transferStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "transferUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "transferWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "tuiPhoneNumberClassifications": {
+        "effectiveValue": [
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local Operator",
+            "displayName": "Local Operator",
+            "uri": "/configuration/dial-plan-classifications/Local%20Operator"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Intercom",
+            "displayName": "Intercom",
+            "uri": "/configuration/dial-plan-classifications/Intercom"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Toll Free",
+            "displayName": "Toll Free",
+            "uri": "/configuration/dial-plan-classifications/Toll%20Free"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Long Distance",
+            "displayName": "Long Distance",
+            "uri": "/configuration/dial-plan-classifications/Long%20Distance"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "SIP",
+            "displayName": "SIP",
+            "uri": "/configuration/dial-plan-classifications/SIP"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Information",
+            "displayName": "Information",
+            "uri": "/configuration/dial-plan-classifications/Information"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "International",
+            "displayName": "International",
+            "uri": "/configuration/dial-plan-classifications/International"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Emergency",
+            "displayName": "Emergency",
+            "uri": "/configuration/dial-plan-classifications/Emergency"
+          },
+          {
+            "grouping": 1,
+            "objectType": 0,
+            "id": "Local",
+            "displayName": "Local",
+            "uri": "/configuration/dial-plan-classifications/Local"
+          }
+        ]
+      },
+      "viewAttendantEmailProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewAttendantInboundProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewAttendantOperatorProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewAttendantOutboundProfiles": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewCampaignList": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewDataSource": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewFeedbackSurveys": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewGeneralDirectories": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewHistoricalReports": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewIndividualStatistics": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewLineQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewProcessList": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewQueueControlColumns": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewRecorderQuestionnaires": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewReport": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewSkillList": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewStationGroups": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewStationQueueInSearch": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewStationQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewStatusColumns": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewUserInteractionHistory": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewUserQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewWorkgroup": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewWorkgroupQueueInSearch": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewWorkgroupQueue": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      },
+      "viewWorkgroupStatistics": {
+        "effectiveValue": [
+          {
+            "grouping": 0,
+            "objectType": 0
+          }
+        ]
+      }
+    },
+    "clientConfigurationProperties": {
+      "accountCodeSortByNumber": {
+        "effectiveValue": true
+      },
+      "alertOnSecurityBelowRequestedLevel": {
+        "effectiveValue": true
+      },
+      "changeAlertingProperties": {
+        "effectiveValue": true
+      },
+      "analyzeOutgoingExternalCalls": {
+        "effectiveValue": false
+      },
+      "autoPlayVoicemail": {
+        "effectiveValue": false
+      },
+      "callForwardAll": {
+        "effectiveValue": false
+      },
+      "callForwardAllMode": {
+        "effectiveValue": "All"
+      },
+      "callForwardAllowChange": {
+        "effectiveValue": true
+      },
+      "confirmSingleClickDialing": {
+        "effectiveValue": true
+      },
+      "confirmDragAndDrop": {
+        "effectiveValue": true
+      },
+      "emailDownloadHTMLPictures": {
+        "effectiveValue": true
+      },
+      "enableAdvancedDialing": {
+        "effectiveValue": false
+      },
+      "externalCallTimeout": {
+        "effectiveValue": 45
+      },
+      "activateOutOfOfficeMessage": {
+        "effectiveValue": false
+      },
+      "changeFollowMeProperties": {
+        "effectiveValue": true
+      },
+      "openNewCallWindowForIncomingCalls": {
+        "effectiveValue": false
+      },
+      "changeQueueProperties": {
+        "effectiveValue": true
+      },
+      "ringWhenOnPhone": {
+        "effectiveValue": true
+      },
+      "screenCalls": {
+        "effectiveValue": false
+      },
+      "autoSelectInteractionOnDisconnect": {
+        "effectiveValue": true
+      },
+      "showStatusInSystemTray": {
+        "effectiveValue": false
+      },
+      "changeEfaqProperties": {
+        "effectiveValue": true
+      }
+    },
+    "administrativeRights": {
+      "interactionProcessAutomation": {
+        "effectiveValue": false
+      },
+      "attendantDefaults": {
+        "effectiveValue": false
+      },
+      "interactionFeedbackConfiguration": {
+        "effectiveValue": false
+      },
+      "clientConfigurationConfiguration": {
+        "effectiveValue": false
+      },
+      "canPublishClientTemplates": {
+        "effectiveValue": false
+      },
+      "collective": {
+        "effectiveValue": false
+      },
+      "dataManagerConfiguration": {
+        "effectiveValue": false
+      },
+      "defaultUserConfiguration": {
+        "effectiveValue": false
+      },
+      "interactionDialerConfiguration": {
+        "effectiveValue": false
+      },
+      "dnisMappingsConfiguration": {
+        "effectiveValue": false
+      },
+      "faxConfiguration": {
+        "effectiveValue": false
+      },
+      "defaultIPPhoneConfiguration": {
+        "effectiveValue": false
+      },
+      "interactionConferenceConfiguration": {
+        "effectiveValue": false
+      },
+      "interactionRecorderConfiguration": {
+        "effectiveValue": false
+      },
+      "interactionTrackerConfiguration": {
+        "effectiveValue": false
+      },
+      "licensesAllocationConfiguration": {
+        "effectiveValue": false
+      },
+      "logRetrievalAssistantConfiguration": {
+        "effectiveValue": false
+      },
+      "mrcpConfiguration": {
+        "effectiveValue": false
+      },
+      "mailConfiguration": {
+        "effectiveValue": false
+      },
+      "mediaServersConfiguration": {
+        "effectiveValue": false
+      },
+      "interactionOptimizerAdvancedConfiguration": {
+        "effectiveValue": false
+      },
+      "interactionOptimizerAgentsConfiguration": {
+        "effectiveValue": false
+      },
+      "passwordPoliciesConfiguration": {
+        "effectiveValue": false
+      },
+      "peerSitesConfiguration": {
+        "effectiveValue": false
+      },
+      "phoneNumbersConfiguration": {
+        "effectiveValue": false
+      },
+      "problemReporterConfiguration": {
+        "effectiveValue": false
+      },
+      "defaultLocationConfiguration": {
+        "effectiveValue": false
+      },
+      "smsConfiguration": {
+        "effectiveValue": false
+      },
+      "serversConfiguration": {
+        "effectiveValue": false
+      },
+      "sipProxyConfiguration": {
+        "effectiveValue": false
+      },
+      "speechRecognitionConfiguration": {
+        "effectiveValue": false
+      },
+      "defaultStationConfiguration": {
+        "effectiveValue": false
+      },
+      "systemConfiguration": {
+        "effectiveValue": false
+      },
+      "canEditAdministrativeRights": {
+        "effectiveValue": true
+      },
+      "masterAdministrator": {
+        "effectiveValue": true
+      },
+      "sametimeConfiguration": {
+        "effectiveValue": false
+      },
+      "sessionManagerServerConfiguration": {
+        "effectiveValue": false
+      },
+      "singleSignOnSecureTokenServer": {
+        "effectiveValue": false
+      }
+    },
+    "utilizations": {
+      "effectiveValue": [
+        {
+          "mediaType": 5,
+          "utilization": 100,
+          "maxAssignable": 0
+        },
+        {
+          "mediaType": 5,
+          "utilization": 100,
+          "maxAssignable": 1
+        },
+        {
+          "mediaType": 2,
+          "utilization": 100,
+          "maxAssignable": 0
+        },
+        {
+          "mediaType": 2,
+          "utilization": 100,
+          "maxAssignable": 1
+        },
+        {
+          "mediaType": 3,
+          "utilization": 100,
+          "maxAssignable": 0
+        },
+        {
+          "mediaType": 3,
+          "utilization": 100,
+          "maxAssignable": 1
+        },
+        {
+          "mediaType": 4,
+          "utilization": 100,
+          "maxAssignable": 0
+        },
+        {
+          "mediaType": 4,
+          "utilization": 100,
+          "maxAssignable": 1
+        },
+        {
+          "mediaType": 1,
+          "utilization": 100,
+          "maxAssignable": 1
+        }
+      ]
+    },
+    "interactionOfferingTimeout": {
+      "effectiveValue": 30
+    },
+    "roles": {
+      "effectiveValue": [
+        {
+          "id": "Administrator",
+          "displayName": "Administrator",
+          "uri": "/configuration/roles/Administrator"
+        }
+      ]
+    },
+    "skills": {
+      "effectiveValue": [
+        {
+          "id": {
+            "id": "English",
+            "displayName": "English",
+            "uri": "/configuration/skills/English"
+          },
+          "proficiency": 5,
+          "desireToUse": 3
+        },
+        {
+          "id": {
+            "id": "Spanish",
+            "displayName": "Spanish",
+            "uri": "/configuration/skills/Spanish"
+          },
+          "proficiency": 1,
+          "desireToUse": 1
+        },
+        {
+          "id": {
+            "id": "French",
+            "displayName": "French",
+            "uri": "/configuration/skills/French"
+          },
+          "proficiency": 1,
+          "desireToUse": 1
+        }
+      ]
+    },
+    "clientConfigurationTemplate": {
+      "effectiveValue": {
+        "id": "AgentTemplate",
+        "displayName": "AgentTemplate",
+        "uri": "/configuration/client-configuration-templates/AgentTemplate"
+      }
+    }
+  }

@@ -1,0 +1,467 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI","Helvetica Neue",Helvetica,"Droid Sans",Arial,sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+ * Basic application model styling.
+ */
+
+ /* Toolbar control. */
+ 
+.application-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  text-align: left;
+  padding: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  background-color: #F5F5F5;
+  line-height: 1.5;
+}
+
+.application-toolbar .application-toolbar-title {
+  font-weight: bold;
+  padding: 3px 30px 3px 3px;
+}
+
+.application-toolbar .application-toolbar-page-selection-area {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #E5E5E5;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #E5E5E5;
+  padding: 0 10px 0 10px;
+}
+
+.application-toolbar .application-toolbar-connect {
+  position: absolute;
+  right: 0;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #E5E5E5;
+  padding: 0 10px 0 10px;
+}
+
+ /* Sidebar control (for the diagnostic control). */
+ 
+.application-sidebar {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+.application-sidebar .application-sidebar-title {
+  font-weight: bold;
+  background-color: #F5F5F5;
+  padding: 3px 5px 3px 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #E5E5E5;
+}
+
+.application-sidebar .application-sidebar-right-area {
+  float: right;
+  clear: none;
+  margin-left: auto;
+  padding: 0 5px 0 0;
+}
+
+.application-sidebar .application-sidebar-contents {
+  position: absolute;
+  left: 5px;
+  top: 30px;
+  right: 0;
+  bottom: 0;
+  font-size: 75%;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-y: auto;
+}
+
+/* Example application explanatory information display */
+
+.example-details-box {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4F8A10;
+  background-color: #DFF2BF;
+  margin: 20px;
+  padding: 0 12px 0 12px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* Insert a title for all example details boxes. */
+.example-details-box:first-child:before {
+  content: "Example Details";
+  font-weight: bold;
+  display: block;
+  padding-top: 10px;
+}
+
+/* General application page styling. */
+
+.application-pages {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  right: 400px;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+/*
+ * Connect page styles
+ */
+ 
+.connection-centered {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.connection-centered form fieldset {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E5E5E5;
+  margin: 0;
+  width: 300px;
+}
+
+/* Server features styling. */
+
+.server-features-area {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.server-features-area tr:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
+.server-features-area tr td:last-child,th:last-child {
+  text-align: right;
+}
+
+/*
+ * Very simple support for a two column dialog.
+ */
+
+.dialog .dialog-row {
+  padding-bottom: 4px;
+}
+
+.dialog .dialog-label {
+  width: 30%;
+  display: inline-block;
+}
+
+.dialog .dialog-field {
+  width: 70%;
+  display: inline-block;
+}
+
+/*
+ * User configuration page styles
+ */
+ 
+.user-config-display {
+  display: inline-block;
+  white-space: pre;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.application-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+/*
+ * Workgroup configuration page styles
+ */
+ 
+.workgroup-config-table td:not(:first-child),th:not(:first-child) {
+  text-align: center;
+}
+
+/*
+ * Recordings page styles
+ */
+.recording-operations {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E5E5E5;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+.recording-operations .api-selection-area {
+  padding: 0 10px 0 10px;
+}
+
+.recording-operations .recording-id-field {
+  font-weight: bold;
+  width: 75%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recording-operations .recording-input {
+  margin: 10px;
+}
+
+.recording-operations .recording-id-input {
+  width: 300px;
+  margin: 10px;
+}
+
+.recording-operations .recording-api {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.recording-operations .status {
+  text-align: center;
+}
+
+.recording-operations .recording-table {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*
+ * Screen Recordings page styles
+ */
+.screen-recording-operations {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E5E5E5;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+.screen-recording-operations .api-selection-area {
+  padding: 0 10px 0 10px;
+}
+
+.screen-recording-operations .screen-recording-recording-ids-field {
+  font-weight: bold;
+  width: 75%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screen-recording-operations .screen-recording-user-id-field {
+  font-weight: bold;
+  width: 75%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screen-recording-operations .screen-recording-input {
+  margin: 10px;
+}
+
+.screen-recording-operations .screen-recording-user-id-input {
+  width: 300px;
+  margin: 4px;
+}
+
+.screen-recording-operations .screen-recording-recording-ids-input {
+  width: 300px;
+  margin: 4px;
+}
+
+.screen-recording-operations .screen-recording-api {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.screen-recording-operations .screen-recording-start-button {
+  margin-left: 160px;
+  margin-right: auto;
+  width: 50px;
+  display: inline-block;
+}
+.screen-recording-operations .screen-recording-pause-button {
+  margin-left: 150px;
+  margin-right: auto;
+  width: 50px;
+  display: inline-block;
+}
+
+.screen-recording-operations .screen-recording-stop-resume-button {
+  margin-left: 5px;
+  margin-right: auto;
+  width: 50px;
+  display: inline-block;
+}
+
+.screen-recording-operations .status {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/*
+ * Very simple table styling.
+ */
+
+.basic-table {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E5E5E5;
+  border-spacing: 0;
+}
+
+.basic-table caption {
+  background-color: #F5F5F5;
+  padding: 3px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  border-color: #E5E5E5;
+}
+
+.basic-table thead {
+  background-color: #F5F5F5;
+}
+
+.basic-table th {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #E5E5E5;
+}
+
+.basic-table td,th {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #E5E5E5;
+}
+
+.basic-table td:last-child,th:last-child {
+  border-right-width: 0;
+}
+
+.basic-table tr:nth-child(even) td {
+  background-color: #F5F5F5;
+}
+
+.basic-table td,th {
+  padding: 3px;
+  text-align: left;
+}
+
+/*
+ * Diagnostic control styles
+ */
+ 
+.application-sidebar .application-sidebar-contents .diagnostic-item {
+  background-color: #F5F5F5;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #E5E5E5;
+}
+
+.application-sidebar .application-sidebar-contents .diagnostic-item:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+.diagnostic-time {
+  font-weight: bold;
+}
+
+.diagnostic-action {
+  font-weight: normal;
+  padding-left: 5px;
+}
+
+.diagnostic-action-detail {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.diagnostic-target {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 5px;
+}
+
+.diagnostic-target-prefix {
+  color: darkgray;
+}
+
+.diagnostic-message {
+  display: inline-block;
+  white-space: pre;
+  width: 100%;
+  padding-left: 5px;
+}
+
+/*
+ * Support for syntax highlighting of JSON representations.
+ */
+ 
+.json-string {
+  color: green;
+}
+
+.json-number {
+  color: darkorange;
+}
+
+.json-boolean {
+  color: blue;
+}
+
+.json-null {
+  color: magenta;
+}
+
+.json-key {
+  color: red;
+}
