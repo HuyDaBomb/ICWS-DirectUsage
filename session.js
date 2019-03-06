@@ -147,7 +147,7 @@ var icwsDirectUsageExample = (function (applicationExports) {
             var utilities = icwsDirectUsageExample.utilities;
             var diagnostics = icwsDirectUsageExample.diagnostics;
             var payload, icwsCsrfTokenValue, icwsSessionIdValue;
-
+          
             if (connectCallback === undefined) {
                 throw new Error('Invalid argument "connectCallback".');
             }
@@ -241,10 +241,12 @@ var icwsDirectUsageExample = (function (applicationExports) {
                     }
                     else {
                         // Signal completion of the operation, with error details.
+                        console.warn ('ERROR HERE');
                         connectCallback(false,
                             {
                                 status: status,
                                 responseText: JSON.stringify(jsonResponse)
+                                
                             });
 
                     }
@@ -494,6 +496,7 @@ var icwsDirectUsageExample = (function (applicationExports) {
             // Once it's available, process the request response.
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState === 4) {
+                    console.warn ('SEND_REQUEST_COMPLETED');
                     sendRequestCompleted(xmlHttp, sessionId, correlationId, resultCallback);
                 }
             };

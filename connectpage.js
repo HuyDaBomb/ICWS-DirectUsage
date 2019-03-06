@@ -142,7 +142,7 @@ var icwsDirectUsageExample = (function (applicationExports) {
             } else {
                 message = 'Failed. status=' + result.status + ', payload=' + result.responseText;
             }
-
+            console.warn('FAILED');
             setConnectionStatusMessage(false, message);
 
 
